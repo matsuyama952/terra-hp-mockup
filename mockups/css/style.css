@@ -97,6 +97,12 @@ address {
   position: relative;
 }
 
+.section--yellow {
+  background: linear-gradient(135deg, #fffde8 0%, #fff8cc 60%, #fffbe0 100%);
+  color: var(--color-text);
+  position: relative;
+}
+
 .section--gray {
   background: linear-gradient(160deg, #f0fdff 0%, #e6f9fb 100%);
 }
@@ -611,18 +617,20 @@ address {
 }
 
 .mission__card {
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 180, 200, 0.20);
   border-radius: var(--radius-lg);
   padding: 40px 28px;
   text-align: center;
   position: relative;
-  transition: background var(--transition), transform var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 100, 120, 0.08);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .mission__card:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.98);
   transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 100, 120, 0.15);
 }
 
 .mission__step {
@@ -630,7 +638,7 @@ address {
   top: -16px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--color-primary);
   color: var(--color-white);
   font-size: 0.75rem;
   font-weight: 900;
@@ -641,14 +649,14 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid var(--color-primary-light);
 }
 
 .mission__icon {
   width: 60px;
   height: 60px;
   margin: 8px auto 20px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
 }
 
 .mission__icon svg {
@@ -659,14 +667,14 @@ address {
 .mission__heading {
   font-size: 1.4rem;
   font-weight: 900;
-  color: var(--color-white);
+  color: var(--color-primary-dark);
   margin-bottom: 14px;
   letter-spacing: 0.1em;
 }
 
 .mission__text {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--color-text-light);
   line-height: 1.85;
   text-align: left;
 }

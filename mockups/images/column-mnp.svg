@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef0e8"/><stop offset="100%" stop-color="#fce0c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#bg)"/>
+  <!-- 矢印（キャリア乗り換え） -->
+  <!-- 旧キャリア -->
+  <rect x="80" y="120" width="180" height="110" rx="10" fill="#e0e8f0"/>
+  <rect x="80" y="120" width="180" height="110" rx="10" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <text x="170" y="165" font-family="sans-serif" font-size="13" fill="#506070" text-anchor="middle" font-weight="bold">他社キャリア</text>
+  <text x="170" y="185" font-family="sans-serif" font-size="11" fill="#708090" text-anchor="middle">契約中</text>
+  <rect x="110" y="200" width="120" height="18" rx="4" fill="#a0b0c0"/>
+  <!-- MNP 矢印 -->
+  <path d="M270 175 L420 175" stroke="#f07700" stroke-width="4" fill="none"/>
+  <polygon points="420,165 440,175 420,185" fill="#f07700"/>
+  <!-- MNP ラベル -->
+  <rect x="300" y="145" width="100" height="28" rx="14" fill="#f07700"/>
+  <text x="350" y="164" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">MNP</text>
+  <!-- チェックリスト -->
+  <rect x="460" y="100" width="260" height="160" rx="8" fill="white" opacity="0.9"/>
+  <text x="590" y="128" font-family="sans-serif" font-size="12" fill="#007080" text-anchor="middle" font-weight="bold">乗り換えチェックリスト</text>
+  <circle cx="480" cy="148" r="7" fill="#40c060"/>
+  <path d="M475 148 L479 153 L488 142" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="500" y="152" font-family="sans-serif" font-size="11" fill="#1a2e30">契約満了タイミング確認</text>
+  <circle cx="480" cy="170" r="7" fill="#40c060"/>
+  <path d="M475 170 L479 175 L488 164" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="500" y="174" font-family="sans-serif" font-size="11" fill="#1a2e30">違約金の有無を確認</text>
+  <circle cx="480" cy="192" r="7" fill="#c0c8d0"/>
+  <text x="500" y="196" font-family="sans-serif" font-size="11" fill="#708090">番号移行手続き</text>
+  <circle cx="480" cy="214" r="7" fill="#c0c8d0"/>
+  <text x="500" y="218" font-family="sans-serif" font-size="11" fill="#708090">端末初期設定</text>
+  <!-- 電話番号引き継ぎイメージ -->
+  <rect x="100" y="258" width="240" height="28" rx="6" fill="white" opacity="0.85"/>
+  <text x="220" y="277" font-family="sans-serif" font-size="12" fill="#007080" text-anchor="middle" font-weight="bold">📞 番号そのまま引き継ぎ可能</text>
+  <!-- タグ -->
+  <rect x="310" y="40" width="180" height="28" rx="14" fill="#f07700"/>
+  <text x="400" y="59" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">法人携帯 乗り換えガイド</text>
+  <!-- ラベル -->
+  <rect x="0" y="300" width="800" height="50" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="330" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">法人携帯の乗り換え（MNP）ポイント解説</text>
+</svg>

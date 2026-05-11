@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f8fc"/>
+      <stop offset="100%" stop-color="#e0eaf6"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8c8b0"/>
+      <stop offset="100%" stop-color="#c0a880"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/>
+      <stop offset="100%" stop-color="#0a1a28"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="url(#room)"/>
+  <!-- 壁 -->
+  <rect x="0" y="0" width="800" height="390" fill="#f0f4f8"/>
+  <!-- 床 -->
+  <rect x="0" y="390" width="800" height="210" fill="#e4e8ec"/>
+  <rect x="0" y="388" width="800" height="5" fill="#c8ccd4"/>
+
+  <!-- 窓 -->
+  <rect x="60" y="60" width="160" height="200" fill="#b8d8f0" rx="4"/>
+  <rect x="60" y="60" width="160" height="200" fill="none" stroke="#a0b8d0" stroke-width="3" rx="4"/>
+  <line x1="140" y1="60" x2="140" y2="260" stroke="#a0b8d0" stroke-width="2"/>
+  <line x1="60" y1="160" x2="220" y2="160" stroke="#a0b8d0" stroke-width="2"/>
+  <!-- 窓の光 -->
+  <rect x="63" y="63" width="73" height="95" fill="rgba(255,255,255,0.3)" rx="2"/>
+
+  <!-- デスク -->
+  <rect x="200" y="340" width="460" height="50" fill="url(#desk)" rx="4"/>
+  <!-- デスクの脚 -->
+  <rect x="220" y="388" width="20" height="60" fill="#b0985a" rx="2"/>
+  <rect x="620" y="388" width="20" height="60" fill="#b0985a" rx="2"/>
+
+  <!-- モニター -->
+  <rect x="310" y="210" width="220" height="140" fill="url(#screen)" rx="6"/>
+  <rect x="314" y="214" width="212" height="132" fill="#1e3a5a" rx="4"/>
+  <!-- 画面の内容 -->
+  <rect x="324" y="224" width="192" height="10" fill="#2a5a8a" rx="2"/>
+  <rect x="324" y="240" width="140" height="8" fill="#1a4a7a" rx="2"/>
+  <rect x="324" y="254" width="160" height="8" fill="#1a4a7a" rx="2"/>
+  <rect x="324" y="274" width="80" height="24" fill="#007080" rx="3"/>
+  <text x="364" y="291" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">送信</text>
+  <!-- モニタースタンド -->
+  <rect x="408" y="348" width="24" height="10" fill="#304050" rx="2"/>
+  <rect x="394" y="356" width="52" height="6" fill="#304050" rx="2"/>
+
+  <!-- キーボード -->
+  <rect x="330" y="358" width="180" height="20" fill="#c8ccd4" rx="3"/>
+  <rect x="335" y="361" width="170" height="14" fill="#d4d8e0" rx="2"/>
+
+  <!-- スタッフ（左側） -->
+  <!-- 体 -->
+  <rect x="130" y="270" width="70" height="120" fill="#1a5a80" rx="6"/>
+  <!-- 頭 -->
+  <ellipse cx="165" cy="252" rx="32" ry="34" fill="#d4a080"/>
+  <!-- 顔のパーツ -->
+  <ellipse cx="155" cy="248" rx="4" ry="4.5" fill="#3a2010"/>
+  <ellipse cx="175" cy="248" rx="4" ry="4.5" fill="#3a2010"/>
+  <path d="M155 262 Q165 270 175 262" stroke="#a06040" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- 髪 -->
+  <path d="M133 248 Q140 218 165 215 Q190 218 197 248 Q190 238 165 236 Q140 238 133 248Z" fill="#1a0808"/>
+  <!-- 手（電話を持っている） -->
+  <rect x="195" y="300" width="12" height="30" fill="#d4a080" rx="3"/>
+  <!-- ヘッドセット -->
+  <path d="M133 240 Q133 210 165 208 Q197 210 197 240" stroke="#304050" stroke-width="4" fill="none"/>
+  <rect x="128" y="238" width="10" height="16" fill="#304050" rx="3"/>
+  <rect x="192" y="238" width="10" height="16" fill="#304050" rx="3"/>
+
+  <!-- お客様（右側、画面越しイメージ） -->
+  <!-- 小さいアイコン風 -->
+  <rect x="590" y="260" width="120" height="100" fill="white" rx="8" opacity="0.9"/>
+  <rect x="590" y="260" width="120" height="100" fill="none" stroke="#a0b8d0" stroke-width="1" rx="8"/>
+  <ellipse cx="650" cy="295" rx="22" ry="24" fill="#e8c0a0"/>
+  <rect x="622" y="318" width="56" height="42" fill="#2a5080" rx="4"/>
+  <path d="M634 294 Q650 287 666 294 Q672 302 668 308 Q658 305 650 303 Q642 305 632 308 Q628 302 634 294Z" fill="#1a0808"/>
+  <text x="650" y="373" font-family="sans-serif" font-size="10" fill="#506080" text-anchor="middle">お客様</text>
+
+  <!-- 吹き出し（スタッフ→お客様） -->
+  <path d="M210 300 Q380 280 590 310" stroke="#007080" stroke-width="1.5" stroke-dasharray="6,4" fill="none" opacity="0.6"/>
+
+  <!-- ラベル -->
+  <rect x="0" y="540" width="800" height="60" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="572" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">専任担当者によるアフターサポート</text>
+</svg>
