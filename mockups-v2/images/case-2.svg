@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0e8"/><stop offset="100%" stop-color="#fce0c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- 店舗風の背景 -->
+  <rect x="0" y="220" width="800" height="180" fill="#e8ddd0"/>
+  <!-- 店舗 -->
+  <rect x="60" y="120" width="220" height="200" fill="#f5e8d8"/>
+  <rect x="60" y="120" width="220" height="50" fill="#e07030"/>
+  <text x="170" y="152" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">SHOP A</text>
+  <rect x="80" y="186" width="60" height="80" fill="#c8d8e8"/>
+  <rect x="160" y="186" width="60" height="80" fill="#c8d8e8"/>
+  <rect x="110" y="276" width="80" height="44" fill="#b8a890"/>
+  <!-- 店舗2 -->
+  <rect x="320" y="140" width="180" height="180" fill="#f0e8dc"/>
+  <rect x="320" y="140" width="180" height="44" fill="#00aacc"/>
+  <text x="410" y="168" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">SHOP B</text>
+  <rect x="340" y="198" width="50" height="70" fill="#c8d8e8"/>
+  <rect x="410" y="198" width="50" height="70" fill="#c8d8e8"/>
+  <rect x="350" y="288" width="70" height="32" fill="#b0a090"/>
+  <!-- 店舗3 -->
+  <rect x="540" y="160" width="200" height="160" fill="#f8f0e8"/>
+  <rect x="540" y="160" width="200" height="40" fill="#404050"/>
+  <text x="640" y="184" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">SHOP C</text>
+  <rect x="560" y="212" width="60" height="60" fill="#c8d8e8"/>
+  <rect x="640" y="212" width="60" height="60" fill="#c8d8e8"/>
+  <rect x="580" y="288" width="80" height="32" fill="#b0a090"/>
+  <!-- 接続線（一括管理イメージ） -->
+  <circle cx="400" cy="80" r="30" fill="#007080"/>
+  <text x="400" y="86" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">本部</text>
+  <line x1="400" y1="110" x2="200" y2="140" stroke="#007080" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="400" y1="110" x2="400" y2="152" stroke="#007080" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="400" y1="110" x2="600" y2="168" stroke="#007080" stroke-width="2" stroke-dasharray="6,3"/>
+  <!-- ラベル -->
+  <rect x="0" y="390" width="800" height="60" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="422" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">導入事例②｜小売業（多店舗展開）</text>
+</svg>

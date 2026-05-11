@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f4fc"/>
+      <stop offset="100%" stop-color="#cce4f4"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- 壁 -->
+  <rect x="0" y="0" width="800" height="420" fill="#f0f6fb"/>
+  <!-- 床 -->
+  <rect x="0" y="420" width="800" height="180" fill="#e0ecf4"/>
+  <rect x="0" y="418" width="800" height="6" fill="#c8d8e8"/>
+  <!-- 壁のデコレーション（ロゴ的な） -->
+  <rect x="300" y="30" width="200" height="60" fill="none" stroke="#007080" stroke-width="2" rx="4" opacity="0.3"/>
+  <text x="400" y="68" font-family="sans-serif" font-size="14" fill="#007080" text-anchor="middle" font-weight="bold" opacity="0.5">TERRA CORPORATE SALES</text>
+
+  <!-- 人物 5人（背景の人） -->
+  <!-- 人1 左端 -->
+  <ellipse cx="120" cy="300" rx="38" ry="48" fill="#d4a080"/>
+  <ellipse cx="120" cy="240" rx="28" ry="30" fill="#d4a080"/>
+  <ellipse cx="120" cy="228" rx="22" ry="24" fill="#c89060"/>
+  <rect x="96" y="300" width="48" height="90" fill="#2a5080" rx="4"/>
+  <!-- 人2 -->
+  <ellipse cx="220" cy="295" rx="40" ry="50" fill="#e8c0a0"/>
+  <ellipse cx="220" cy="232" rx="28" ry="30" fill="#e8c0a0"/>
+  <ellipse cx="220" cy="220" rx="22" ry="24" fill="#d4a880"/>
+  <rect x="194" y="295" width="52" height="95" fill="#1a6040" rx="4"/>
+
+  <!-- 人3 中央（少し前に） -->
+  <ellipse cx="340" cy="310" rx="44" ry="54" fill="#d4a080"/>
+  <ellipse cx="340" cy="242" rx="32" ry="34" fill="#d4a080"/>
+  <ellipse cx="340" cy="228" rx="26" ry="27" fill="#c89070"/>
+  <rect x="312" y="310" width="56" height="100" fill="#004a70" rx="4"/>
+
+  <!-- 人4 -->
+  <ellipse cx="480" cy="295" rx="40" ry="50" fill="#f0d0b0"/>
+  <ellipse cx="480" cy="232" rx="29" ry="31" fill="#f0d0b0"/>
+  <ellipse cx="480" cy="219" rx="23" ry="25" fill="#e0b890"/>
+  <rect x="454" y="295" width="52" height="95" fill="#2a5080" rx="4"/>
+  <!-- 髪（女性風） -->
+  <path d="M457 219 Q480 195 503 219 Q510 230 505 240 Q490 235 480 232 Q470 235 455 240 Q450 230 457 219Z" fill="#3a2010"/>
+
+  <!-- 人5 右端 -->
+  <ellipse cx="600" cy="300" rx="42" ry="52" fill="#c89070"/>
+  <ellipse cx="600" cy="236" rx="30" ry="32" fill="#c89070"/>
+  <ellipse cx="600" cy="222" rx="24" ry="26" fill="#b87860"/>
+  <rect x="574" y="300" width="52" height="96" fill="#1a6040" rx="4"/>
+
+  <!-- 人6 右端2 -->
+  <ellipse cx="700" cy="305" rx="38" ry="48" fill="#e8c0a0"/>
+  <ellipse cx="700" cy="243" rx="27" ry="29" fill="#e8c0a0"/>
+  <ellipse cx="700" cy="231" rx="21" ry="23" fill="#d8a888"/>
+  <rect x="676" y="305" width="48" height="90" fill="#2a5080" rx="4"/>
+  <!-- 髪 -->
+  <path d="M679 231 Q700 208 721 231 Q728 242 722 252 Q706 246 700 243 Q694 246 678 252 Q672 242 679 231Z" fill="#1a0808"/>
+
+  <!-- 笑顔の線（簡易表現） -->
+  <path d="M113 248 Q120 255 127 248" stroke="#a06040" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M213 240 Q220 247 227 240" stroke="#b07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M333 248 Q340 256 347 248" stroke="#a06040" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M473 240 Q480 248 487 240" stroke="#c09070" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M593 243 Q600 251 607 243" stroke="#985848" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M693 251 Q700 258 707 251" stroke="#b07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ラベル -->
+  <rect x="0" y="540" width="800" height="60" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="572" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">法人専門スタッフ一同</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/><stop offset="100%" stop-color="#dce8f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- モニター -->
+  <rect x="180" y="60" width="340" height="220" rx="10" fill="#1a2030"/>
+  <rect x="192" y="72" width="316" height="196" rx="4" fill="#2a3a50"/>
+  <rect x="328" y="280" width="44" height="30" rx="2" fill="#1a2030"/>
+  <rect x="288" y="308" width="124" height="8" rx="4" fill="#1a2030"/>
+  <!-- 画面内容 -->
+  <rect x="202" y="82" width="296" height="18" rx="3" fill="#007080" opacity="0.8"/>
+  <rect x="202" y="108" width="200" height="10" rx="2" fill="#4a7090" opacity="0.6"/>
+  <rect x="202" y="125" width="240" height="10" rx="2" fill="#4a7090" opacity="0.5"/>
+  <rect x="202" y="150" width="296" height="80" rx="4" fill="#1a2840"/>
+  <rect x="202" y="240" width="80" height="22" rx="4" fill="#00ccdd"/>
+  <!-- キーボード -->
+  <rect x="250" y="320" width="200" height="40" rx="6" fill="#c8ccd4"/>
+  <rect x="258" y="327" width="184" height="26" rx="4" fill="#d4d8e0"/>
+  <!-- 複合機 -->
+  <rect x="560" y="120" width="160" height="200" rx="8" fill="#c8ccd4"/>
+  <rect x="568" y="130" width="144" height="90" rx="4" fill="#e0e4ea"/>
+  <rect x="568" y="130" width="144" height="90" rx="4" fill="#b8d8f0" opacity="0.5"/>
+  <rect x="568" y="228" width="60" height="40" rx="3" fill="#a8b8c8"/>
+  <rect x="636" y="228" width="76" height="16" rx="2" fill="#007080"/>
+  <rect x="636" y="250" width="76" height="8" rx="2" fill="#90a0b0"/>
+  <rect x="576" y="316" width="128" height="4" rx="2" fill="#a0b0c0"/>
+  <!-- ラベル -->
+  <rect x="0" y="390" width="800" height="60" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="422" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">PC・複合機</text>
+</svg>

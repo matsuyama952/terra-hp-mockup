@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f0fc"/><stop offset="100%" stop-color="#d0e0f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#bg)"/>
+  <!-- 中央：盾アイコン（セキュリティ） -->
+  <path d="M400 60 L480 90 L480 180 Q480 230 400 260 Q320 230 320 180 L320 90 Z" fill="#007080" opacity="0.15"/>
+  <path d="M400 70 L470 96 L470 178 Q470 222 400 250 Q330 222 330 178 L330 96 Z" fill="none" stroke="#007080" stroke-width="3"/>
+  <path d="M370 158 L390 178 L435 133" stroke="#007080" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 端末アイコン（複数） -->
+  <rect x="100" y="120" width="60" height="90" rx="8" fill="#1a2a3a" opacity="0.8"/>
+  <rect x="107" y="128" width="46" height="74" rx="3" fill="#2a4a6a"/>
+  <circle cx="130" cy="208" r="4" fill="#304050"/>
+  <rect x="180" y="140" width="80" height="55" rx="6" fill="#1a2a3a" opacity="0.8"/>
+  <rect x="187" y="147" width="66" height="41" rx="3" fill="#2a4a6a"/>
+  <rect x="220" y="194" width="4" height="12" fill="#304050"/>
+  <rect x="208" y="205" width="28" height="4" rx="2" fill="#304050"/>
+  <!-- 右側端末 -->
+  <rect x="620" y="120" width="60" height="90" rx="8" fill="#1a2a3a" opacity="0.8"/>
+  <rect x="627" y="128" width="46" height="74" rx="3" fill="#2a4a6a"/>
+  <circle cx="650" cy="208" r="4" fill="#304050"/>
+  <rect x="530" y="140" width="80" height="55" rx="6" fill="#1a2a3a" opacity="0.8"/>
+  <rect x="537" y="147" width="66" height="41" rx="3" fill="#2a4a6a"/>
+  <!-- 接続線 -->
+  <line x1="165" y1="160" x2="320" y2="155" stroke="#00ccdd" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="260" y1="165" x2="320" y2="165" stroke="#00ccdd" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="480" y1="155" x2="615" y2="155" stroke="#00ccdd" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="480" y1="165" x2="525" y2="165" stroke="#00ccdd" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- タグ -->
+  <rect x="270" y="40" width="100" height="28" rx="14" fill="#007080"/>
+  <text x="320" y="59" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">MDM</text>
+  <!-- ラベル -->
+  <rect x="0" y="300" width="800" height="50" fill="rgba(0,112,128,0.75)"/>
+  <text x="400" y="330" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">MDM（モバイルデバイス管理）</text>
+</svg>
