@@ -12,57 +12,39 @@
 </head>
 <body>
 
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <!-- ユーティリティバー（電話・ダウンロード・問い合わせ） -->
-    <div class="header__utility">
-      <div class="container">
-        <div class="header__utilityInner">
-          <a href="tel:0364320830" class="header__utilityTel">
-            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"><path d="M4 2a1 1 0 00-1 1v1.5C3 11.956 8.044 17 15.5 17H17a1 1 0 001-1v-2a1 1 0 00-.684-.948l-3-1a1 1 0 00-1.11.416L12.5 13.5A9.5 9.5 0 016.5 7.5l1.032-.706a1 1 0 00.416-1.11l-1-3A1 1 0 006 2H4z" fill="currentColor"/></svg>
-            <span class="header__utilityTelLabel">ご相談中の方の電話相談窓口</span>
-            <strong class="header__utilityTelNum">03-6432-0830</strong>
-          </a>
-          <div class="header__utilityActions">
-            <a href="contact/" class="btn btn--download">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="14" height="14"><path d="M8 12l-4-4h2.5V3h3v5H12L8 12z" fill="currentColor"/><rect x="2" y="13" width="12" height="1.5" rx="0.75" fill="currentColor"/></svg>
-              資料ダウンロード
-            </a>
-            <a href="contact/" class="btn btn--inquiry">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="14" height="14"><path d="M2 3a1 1 0 011-1h10a1 1 0 011 1v7a1 1 0 01-1 1H9l-3 3v-3H3a1 1 0 01-1-1V3z" fill="currentColor"/></svg>
-              お問い合わせ
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- メインヘッダー（ロゴ＋ナビ） -->
-    <div class="header__main">
-      <div class="header__inner container">
-        <a href="/" class="header__logo">
-          <div class="header__logoText">
-            <span class="header__logoCompany">株式会社テラ</span>
-            <span class="header__logoName">コーポレートセールスカンパニー</span>
-            <span class="header__logoSub">au法人携帯／since 1995</span>
-          </div>
+
+  <!-- ========== SITE NAVIGATION ========== -->
+  <header class="siteNav" id="siteNav">
+    <div class="siteNav__inner">
+
+      <!-- ロゴ -->
+      <a href="/" class="siteNav__logo">
+        <span class="siteNav__logoName">株式会社テラ</span>
+        <span class="siteNav__logoSub">コーポレートセールスカンパニー　<span class="siteNav__logoSince">since 1995</span></span>
+      </a>
+
+      <!-- 目次リンク -->
+      <nav class="siteNav__links" aria-label="ページ内ナビゲーション">
+        <a href="#solution" class="siteNav__link">
+          <span class="siteNav__num">01</span>サービス
         </a>
-        <nav class="nav" id="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="/" class="nav__link is-active">HOME</a></li>
-            <li class="nav__item"><a href="product/" class="nav__link">製品紹介</a></li>
-            <li class="nav__item"><a href="case/" class="nav__link">導入事例</a></li>
-            <li class="nav__item"><a href="faq/" class="nav__link">FAQ</a></li>
-            <li class="nav__item"><a href="about/" class="nav__link">会社紹介</a></li>
-            <li class="nav__item"><a href="contact/" class="nav__link">お問い合わせ</a></li>
-            <li class="nav__item"><a href="support/" class="nav__link nav__link--cta">対応依頼</a></li>
-          </ul>
-        </nav>
-        <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-        </button>
-      </div>
+        <a href="#cases" class="siteNav__link">
+          <span class="siteNav__num">02</span>導入事例
+        </a>
+        <a href="#column" class="siteNav__link">
+          <span class="siteNav__num">03</span>コラム
+        </a>
+        <a href="#faq" class="siteNav__link">
+          <span class="siteNav__num">04</span>FAQ
+        </a>
+        <a href="about/" class="siteNav__link">
+          <span class="siteNav__num">05</span>会社紹介
+        </a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="contact/" class="siteNav__cta">お問い合わせ</a>
+
     </div>
   </header>
 
@@ -70,28 +52,77 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero">
-      <div class="hero__bg">
-        <img src="images/hero-main.jpg" alt="テラ コーポレートセールスカンパニー オフィス" class="hero__bgImg">
-        <div class="hero__overlay"></div>
-      </div>
-      <div class="hero__content container">
-        <p class="hero__badge">au正規代理店</p>
-        <h1 class="hero__title">au法人携帯、<br>30年の信頼。</h1>
-        <p class="hero__lead">
-          1995年創業。中小企業から大企業まで、<br>
-          法人専門のプロフェッショナルが貴社の通信を最適化します。
-        </p>
-        <div class="hero__cta">
-          <a href="contact/" class="btn btn--primary btn--lg">無料で相談してみる</a>
-          <a href="about/" class="btn btn--outline btn--lg">なぜテラか</a>
+
+
+
+      <div class="hero__content">
+
+        <!-- 左：テキストエリア -->
+        <div class="hero__txtarea">
+
+          <!-- 手描きペンキ塗り円（背景） -->
+          <div class="hero__paintBg" aria-hidden="true">
+            <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <filter id="paint" x="-25%" y="-25%" width="150%" height="150%">
+                  <feTurbulence type="turbulence" baseFrequency="0.018 0.022" numOctaves="5" seed="8" result="noise"/>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+                  <feGaussianBlur in="rough" stdDeviation="2.2"/>
+                </filter>
+              </defs>
+              <ellipse cx="260" cy="220" rx="252" ry="212" fill="rgba(255,255,255,0.72)" filter="url(#paint)"/>
+            </svg>
+          </div>
+
+          <p class="hero__midTitle">課題を解くのは、いつだって<span class="hero__titleHl">「人」</span>でありたい。</p>
+          <p class="hero__midTitle">一歩先のソリューションで解決し、</p>
+          <h1 class="hero__boldTitle">一貫のサポートで、<br>未来をつなぐ。</h1>
+        </div>
+
+      </div><!-- /hero__content -->
+
+      <!--
+        ========================================================
+        【画像の追加方法】
+        セット1（5枚）の <img> を実際の画像に差し替えてください。
+        セット2は複製（aria-hidden="true"）です。同じ画像を同順で。
+        ========================================================
+      -->
+      <div class="hero__strip">
+        <div class="hero__stripRail">
+          <!-- セット1（2枚を交互・全8枚） -->
+          <img src="images/slide-01.webp" alt="au法人携帯 握手">
+          <img src="images/slide-02.jpg"  alt="オフィス">
+          <img src="images/slide-01.webp" alt="au法人携帯 握手">
+          <img src="images/slide-02.jpg"  alt="オフィス">
+          <img src="images/slide-01.webp" alt="au法人携帯 握手">
+          <img src="images/slide-02.jpg"  alt="オフィス">
+          <img src="images/slide-01.webp" alt="au法人携帯 握手">
+          <img src="images/slide-02.jpg"  alt="オフィス">
+          <!-- セット2（複製） -->
+          <img src="images/slide-01.webp" alt="" aria-hidden="true">
+          <img src="images/slide-02.jpg"  alt="" aria-hidden="true">
+          <img src="images/slide-01.webp" alt="" aria-hidden="true">
+          <img src="images/slide-02.jpg"  alt="" aria-hidden="true">
+          <img src="images/slide-01.webp" alt="" aria-hidden="true">
+          <img src="images/slide-02.jpg"  alt="" aria-hidden="true">
+          <img src="images/slide-01.webp" alt="" aria-hidden="true">
+          <img src="images/slide-02.jpg"  alt="" aria-hidden="true">
         </div>
       </div>
+
+      <!-- ウェーブ -->
       <div class="hero__wave">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
         </svg>
       </div>
+
     </section>
+
+
+
+
 
     <!-- ========== STATS（実績数値）========== -->
     <section class="stats section">
