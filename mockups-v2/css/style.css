@@ -21,69 +21,76 @@
 /* ====================================================
    INTRO OVERLAY
    ==================================================== */
+/* =============================================
+   INTRO SPLASH
+   ============================================= */
 .intro {
   position: fixed;
   inset: 0;
   z-index: 500;
   background: #030D0F;
-  overflow: hidden;
-  pointer-events: none;
-  transition: opacity 0.8s ease;
-}
-.intro__canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* イントロテキストレイヤー */
-.intro__text {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   pointer-events: none;
 }
-.intro__brand {
-  font-size: clamp(10px, 1.3vw, 15px);
-  letter-spacing: 0.36em;
-  text-transform: uppercase;
-  font-weight: 300;
-  color: rgba(255,255,255,0);
-  transition: color 0.7s;
-  margin-bottom: 48px;
+.intro.hide {
+  animation: introWipeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
-.intro__brand.on { color: rgba(255,255,255,0.5); }
+@keyframes introWipeUp {
+  0%   { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 100% 0); }
+}
 
-.intro__h { text-align: center; margin-bottom: 24px; }
-.intro__line { display: block; overflow: hidden; }
-.intro__line-in {
-  display: block;
-  font-size: clamp(30px, 5vw, 64px);
-  font-weight: 300;
-  letter-spacing: 0.07em;
-  line-height: 1.75;
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* ロゴ：言葉が下からスライドイン */
+.intro__logo {
+  display: flex;
+  align-items: baseline;
+  overflow: hidden;
+}
+.intro__word {
+  font-family: 'Oswald', 'Noto Sans JP', sans-serif;
+  font-size: clamp(28px, 5vw, 58px);
+  font-weight: 700;
+  letter-spacing: 0.18em;
   color: #fff;
-  transform: translateY(105%);
-  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  transform: translateY(70px);
+  opacity: 0;
+  animation: splashWordIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-.intro__line-in.--bold { font-weight: 500; color: var(--red); }
-.intro__line-in.up { transform: translateY(0); }
+.intro__word:nth-child(1) { animation-delay: 0.10s; }
+.intro__word.--tq         { color: var(--red); animation-delay: 0.26s; }
+.intro__word:nth-child(3) { animation-delay: 0.42s; }
 
-.intro__sub {
-  font-size: clamp(10px, 1vw, 12px);
-  letter-spacing: 0.22em;
-  font-weight: 300;
-  color: rgba(255,255,255,0);
-  text-align: center;
-  line-height: 2.4;
-  transition: color 0.9s;
+@keyframes splashWordIn {
+  to { transform: translateY(0); opacity: 1; }
 }
-.intro__sub.on { color: rgba(255,255,255,0.4); }
+
+/* プログレスバー */
+.intro__bar-wrap {
+  width: 200px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  opacity: 0;
+  animation: splashFadeIn 0.3s ease 0.5s forwards;
+}
+.intro__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--red);
+  animation: splashBarFill 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+@keyframes splashBarFill  { to { width: 100%; } }
+@keyframes splashFadeIn   { to { opacity: 1; } }
 
 /* ====================================================
    リセット・ベース
