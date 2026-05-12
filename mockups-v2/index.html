@@ -12,13 +12,16 @@
 </head>
 <body>
 
-<!-- =============== INTRO OVERLAY =============== -->
-<div class="intro" id="intro" aria-hidden="true">
-  <div class="intro__content">
-    <p class="intro__since">since 1995 — au正規代理店</p>
-    <div class="intro__logo">TERRA</div>
-    <p class="intro__tagline">お客様の課題を、一歩先のソリューションで、<br><em>人</em>が解決する</p>
-    <p class="intro__scroll">scroll</p>
+<!-- =============== INTRO =============== -->
+<div class="intro" id="intro">
+  <canvas class="intro__canvas" id="introCanvas"></canvas>
+  <div class="intro__text" id="introText">
+    <p class="intro__brand" id="iBrand">TERRA Corporate Sales Company</p>
+    <div class="intro__h">
+      <span class="intro__line"><span class="intro__line-in" id="iL1">人の課題は、</span></span>
+      <span class="intro__line"><span class="intro__line-in --bold" id="iL2">ソリューションで解決する。</span></span>
+    </div>
+    <p class="intro__sub" id="iSub">au 認定ディーラー ／ 法人モバイル・IT ソリューション</p>
   </div>
 </div>
 
@@ -26,8 +29,7 @@
 <header class="hdr">
   <div class="hdr__inner">
     <a class="hdr__logo" href="#">
-      <span class="hdr__logo-terra">TERRA</span>
-      <span class="hdr__logo-sub">株式会社テラ コーポレートセールスカンパニー</span>
+      <img src="images/logo-terra.svg" alt="TERRA 株式会社テラ コーポレートセールスカンパニー" class="hdr__logo-img">
     </a>
     <nav class="hdr__nav">
       <a href="#">テラについて</a>
@@ -48,10 +50,10 @@
   <!-- 背景：画像スライドショー -->
   <div class="hero__bgSlide" aria-hidden="true">
     <div class="hero__bgSlide__item is-active">
-      <img src="images/slide-01.webp" alt="">
+      <img src="images/slide-02.jpg" alt="">
     </div>
     <div class="hero__bgSlide__item">
-      <img src="images/slide-02.jpg" alt="">
+      <img src="images/hero-main.jpg" alt="">
     </div>
     <div class="hero__bgOverlay"></div>
   </div>
@@ -130,44 +132,10 @@
       <p class="hero__eyebrow">au正規代理店 since 1995</p>
 
       <h1 class="hero__h1">
-        お客様の課題を、<br>
-        一歩先のソリューションで、<br>
+        ビジネス課題を、<br>
+        一歩先のソリューションで<br>
         <span class="hero__accent">人</span>が解決する
       </h1>
-
-      <!-- バッジ3個 -->
-      <div class="hero__badges">
-        <div class="hero__badge">
-          <svg viewBox="0 0 100 100" class="badge__ring">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#E8680A" stroke-width="4"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8680A" stroke-width="1" stroke-dasharray="4 3"/>
-          </svg>
-          <div class="badge__inner">
-            <span class="badge__num">10,000<small>台+</small></span>
-            <span class="badge__label">開通台数</span>
-          </div>
-        </div>
-        <div class="hero__badge">
-          <svg viewBox="0 0 100 100" class="badge__ring">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#E8680A" stroke-width="4"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8680A" stroke-width="1" stroke-dasharray="4 3"/>
-          </svg>
-          <div class="badge__inner">
-            <span class="badge__num">30<small>年+</small></span>
-            <span class="badge__label">サービス歴</span>
-          </div>
-        </div>
-        <div class="hero__badge">
-          <svg viewBox="0 0 100 100" class="badge__ring">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#E8680A" stroke-width="4"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8680A" stroke-width="1" stroke-dasharray="4 3"/>
-          </svg>
-          <div class="badge__inner">
-            <span class="badge__num">500<small>社+</small></span>
-            <span class="badge__label">導入支援</span>
-          </div>
-        </div>
-      </div>
 
       <p class="hero__lead">
         携帯の導入から運用・切り替えまで、<br>
@@ -175,80 +143,9 @@
         まずはお気軽にご相談ください。
       </p>
 
-      <!-- キャラクターイラスト -->
-      <div class="hero__illust" aria-hidden="true">
-        <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" class="illust__svg">
-          <path d="M110 60 L110 130 Q110 165 150 178 Q190 165 190 130 L190 60 Z" fill="#1a237e" stroke="#3949ab" stroke-width="2"/>
-          <path d="M118 68 L118 128 Q118 157 150 168 Q182 157 182 128 L182 68 Z" fill="#283593"/>
-          <circle cx="150" cy="108" r="14" fill="none" stroke="#90caf9" stroke-width="2.5"/>
-          <rect x="143" y="118" width="14" height="12" rx="2" fill="#90caf9"/>
-          <line x1="150" y1="124" x2="150" y2="130" stroke="#1a237e" stroke-width="2"/>
-          <ellipse cx="160" cy="185" rx="22" ry="30" fill="#E8680A"/>
-          <circle cx="160" cy="148" r="22" fill="#f5cba7"/>
-          <ellipse cx="160" cy="132" rx="22" ry="10" fill="#3e2723"/>
-          <rect x="138" y="132" width="8" height="18" rx="4" fill="#3e2723"/>
-          <rect x="174" y="132" width="8" height="18" rx="4" fill="#3e2723"/>
-          <circle cx="153" cy="148" r="2.5" fill="#6d4c41"/>
-          <circle cx="167" cy="148" r="2.5" fill="#6d4c41"/>
-          <path d="M153 158 Q160 163 167 158" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M138 185 Q120 195 118 215" stroke="#E8680A" stroke-width="14" fill="none" stroke-linecap="round"/>
-          <ellipse cx="116" cy="218" rx="9" ry="7" fill="#f5cba7"/>
-          <path d="M182 185 Q200 195 202 215" stroke="#E8680A" stroke-width="14" fill="none" stroke-linecap="round"/>
-          <rect x="195" y="200" width="28" height="48" rx="4" fill="#263238"/>
-          <rect x="198" y="205" width="22" height="36" rx="2" fill="#29b6f6"/>
-          <circle cx="209" cy="246" r="2" fill="#607d8b"/>
-          <text x="200" y="228" font-family="sans-serif" font-size="9" font-weight="bold" fill="white">au</text>
-          <text x="199" y="238" font-family="sans-serif" font-size="5" fill="white">法人サポート</text>
-          <rect x="145" y="212" width="12" height="28" rx="4" fill="#1a237e"/>
-          <rect x="163" y="212" width="12" height="28" rx="4" fill="#1a237e"/>
-          <rect x="143" y="237" width="16" height="8" rx="3" fill="#111"/>
-          <rect x="161" y="237" width="16" height="8" rx="3" fill="#111"/>
-          <circle cx="220" cy="145" r="14" fill="#4caf50" opacity="0.9"/>
-          <polyline points="213,145 218,151 228,139" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="62" y="160" width="32" height="22" rx="3" fill="white" stroke="#E8680A" stroke-width="1.5"/>
-          <polyline points="62,160 78,172 94,160" fill="none" stroke="#E8680A" stroke-width="1.5"/>
-          <text x="55" y="125" font-family="sans-serif" font-size="18" fill="#f9a825">★★★★★</text>
-          <circle cx="160" cy="200" r="50" fill="none" stroke="#E8680A" stroke-width="1" opacity="0.15"/>
-          <circle cx="160" cy="200" r="70" fill="none" stroke="#E8680A" stroke-width="1" opacity="0.10"/>
-          <circle cx="160" cy="200" r="90" fill="none" stroke="#E8680A" stroke-width="0.5" opacity="0.07"/>
-        </svg>
-      </div>
-
     </div><!-- /.hero__left -->
 
-    <!-- 右カラム：問い合わせフォーム -->
-    <div class="hero__right">
-      <div class="formCard" id="contact">
-        <div class="formCard__hd">
-          <span class="formCard__hdJa">まずは無料相談</span>
-          <span class="formCard__hdEn">CONTACT</span>
-        </div>
-        <form class="formCard__body" action="#" method="post">
-          <div class="formField">
-            <label class="formField__lbl" for="fc-company">会社名<span class="req">必須</span></label>
-            <input class="formField__inp" type="text" id="fc-company" name="company" placeholder="株式会社テラ">
-          </div>
-          <div class="formField">
-            <label class="formField__lbl" for="fc-name">お名前<span class="req">必須</span></label>
-            <input class="formField__inp" type="text" id="fc-name" name="name" placeholder="山田 太郎">
-          </div>
-          <div class="formField">
-            <label class="formField__lbl" for="fc-tel">電話番号<span class="req">必須</span></label>
-            <input class="formField__inp" type="tel" id="fc-tel" name="tel" placeholder="03-1234-5678">
-          </div>
-          <div class="formField">
-            <label class="formField__lbl" for="fc-email">メールアドレス<span class="req">必須</span></label>
-            <input class="formField__inp" type="email" id="fc-email" name="email" placeholder="info@example.com">
-          </div>
-          <div class="formField">
-            <label class="formField__lbl" for="fc-msg">お問い合わせ内容</label>
-            <textarea class="formField__inp formField__inp--ta" id="fc-msg" name="message" rows="4" placeholder="ご質問・ご要望をご記入ください"></textarea>
-          </div>
-          <button class="formCard__submit" type="submit">無料で相談する →</button>
-          <p class="formCard__note">個人情報の取り扱いについては<a href="#">プライバシーポリシー</a>をご確認ください。</p>
-        </form>
-      </div>
-    </div><!-- /.hero__right -->
+
 
   </div><!-- /.hero__inner -->
 </section>
@@ -284,21 +181,21 @@
     <div class="mission__grid">
       <div class="mission__card">
         <div class="mission__icon">
-          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#E8680A" opacity="0.1"/><path d="M24 12 L28 20 L38 21 L31 28 L33 38 L24 33 L15 38 L17 28 L10 21 L20 20 Z" fill="#E8680A"/></svg>
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#1AC9DA" opacity="0.1"/><path d="M24 12 L28 20 L38 21 L31 28 L33 38 L24 33 L15 38 L17 28 L10 21 L20 20 Z" fill="#1AC9DA"/></svg>
         </div>
         <h3>30年の信頼実績</h3>
         <p>1995年創業。長年のノウハウと信頼で、複雑な法人ニーズに対応します。</p>
       </div>
       <div class="mission__card">
         <div class="mission__icon">
-          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#E8680A" opacity="0.1"/><rect x="14" y="14" width="20" height="26" rx="3" fill="none" stroke="#E8680A" stroke-width="2"/><line x1="18" y1="22" x2="30" y2="22" stroke="#E8680A" stroke-width="2"/><line x1="18" y1="28" x2="30" y2="28" stroke="#E8680A" stroke-width="2"/><line x1="18" y1="34" x2="24" y2="34" stroke="#E8680A" stroke-width="2"/></svg>
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#1AC9DA" opacity="0.1"/><rect x="14" y="14" width="20" height="26" rx="3" fill="none" stroke="#1AC9DA" stroke-width="2"/><line x1="18" y1="22" x2="30" y2="22" stroke="#1AC9DA" stroke-width="2"/><line x1="18" y1="28" x2="30" y2="28" stroke="#1AC9DA" stroke-width="2"/><line x1="18" y1="34" x2="24" y2="34" stroke="#1AC9DA" stroke-width="2"/></svg>
         </div>
         <h3>ワンストップサポート</h3>
         <p>導入・切り替え・運用管理まで、専任担当者が一貫してサポートします。</p>
       </div>
       <div class="mission__card">
         <div class="mission__icon">
-          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#E8680A" opacity="0.1"/><path d="M24 10 L24 38 M10 24 L38 24" stroke="#E8680A" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="8" fill="none" stroke="#E8680A" stroke-width="2"/></svg>
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#1AC9DA" opacity="0.1"/><path d="M24 10 L24 38 M10 24 L38 24" stroke="#1AC9DA" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="8" fill="none" stroke="#1AC9DA" stroke-width="2"/></svg>
         </div>
         <h3>全国対応</h3>
         <p>全国の拠点から、迅速な現地対応が可能です。地方企業様もご安心ください。</p>
