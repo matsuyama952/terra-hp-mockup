@@ -60,21 +60,7 @@
         <!-- 左：テキストエリア -->
         <div class="hero__txtarea">
 
-          <!-- 手描きペンキ塗り円（背景） -->
-          <div class="hero__paintBg" aria-hidden="true">
-            <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-              <defs>
-                <filter id="paint" x="-25%" y="-25%" width="150%" height="150%">
-                  <feTurbulence type="turbulence" baseFrequency="0.018 0.022" numOctaves="5" seed="8" result="noise"/>
-                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" result="rough"/>
-                  <feGaussianBlur in="rough" stdDeviation="2.2"/>
-                </filter>
-              </defs>
-              <ellipse cx="260" cy="220" rx="252" ry="212" fill="rgba(255,255,255,0.72)" filter="url(#paint)"/>
-            </svg>
-          </div>
-
-          <p class="hero__midTitle">課題を解くのは、いつだって<span class="hero__titleHl">「人」</span>でありたい。</p>
+<p class="hero__midTitle">課題を解くのは、いつだって<span class="hero__titleHl">「人」</span>でありたい。</p>
           <p class="hero__midTitle">一歩先のソリューションで解決し、</p>
           <h1 class="hero__boldTitle">一貫のサポートで、<br>未来をつなぐ。</h1>
         </div>
