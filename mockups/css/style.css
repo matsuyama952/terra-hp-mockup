@@ -563,7 +563,7 @@ address {
   height: 100vh;
   min-height: 640px;
   overflow: hidden;
-  background-color: #fffff0;
+  background-color: #ffffff;
 }
 
 /* 斑点背景 */
@@ -596,16 +596,16 @@ address {
 .hero__txtarea {
   flex: none;
   width: 100%;
-  max-width: 700px;
+  max-width: 760px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.82);
   border: none;
   border-radius: 0;
   box-shadow: none;
-  padding: 60px 60px;
+  padding: 64px 72px;
   position: relative;
 }
 
@@ -683,9 +683,9 @@ address {
 
 /* 中タイトル（サブ文言） */
 .hero__midTitle {
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
   font-weight: 500;
-  color: rgba(26, 46, 48, 0.60);
+  color: rgba(26, 46, 48, 0.70);
   line-height: 1.9;
   letter-spacing: 0.05em;
   margin-bottom: 0.2rem;
@@ -699,7 +699,7 @@ address {
 
 /* 太文字メインタイトル */
 .hero__boldTitle {
-  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  font-size: clamp(2.4rem, 4.6vw, 4.2rem);
   font-weight: 900;
   color: #1a2e30;
   line-height: 1.3;
