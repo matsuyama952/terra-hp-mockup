@@ -1,7 +1,6 @@
 
 /* ====================================================
-   イントロ：ターコイズブロブ → フラッシュ → テキスト表示
-   cylinder-intro.html のアニメーションを移植
+   イントロ：白フラッシュ → 暗い背景＋テキスト表示
    ==================================================== */
 (function () {
   const cvs = document.getElementById('introCanvas');
@@ -14,60 +13,16 @@
 
   const easeOutExpo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
 
-  /* ---- ブロブ ---- */
-  class Blob {
-    constructor(i, n) {
-      const a = (i / n) * Math.PI * 2 + Math.random() * 0.5;
-      this.x  = W / 2 + Math.cos(a) * W * 0.22;
-      this.y  = H / 2 + Math.sin(a) * H * 0.22;
-      this.vx = (Math.random() - 0.5) * 2.2;
-      this.vy = (Math.random() - 0.5) * 2.2;
-      this.r  = W * (0.14 + Math.random() * 0.18);
-      this.delay = i * 0.14;
-      this.scale = 0;
-      const palette = [
-        [0,200,215],[0,229,240],[0,143,155],
-        [77,220,235],[0,180,195],[26,201,218],
-      ];
-      [this.r0, this.g0, this.b0] = palette[i % palette.length];
-    }
-    update(t) {
-      const e = t - this.delay;
-      if (e < 0) return;
-      this.scale = Math.min(easeOutExpo(e / 1.6), 1);
-      if (this.scale >= 1) {
-        this.x += this.vx; this.y += this.vy;
-        if (this.x < 0 || this.x > W) this.vx *= -1;
-        if (this.y < 0 || this.y > H) this.vy *= -1;
-      }
-    }
-    draw(alpha = 1) {
-      const r = this.r * this.scale;
-      if (r <= 0) return;
-      const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, r);
-      g.addColorStop(0,    `rgba(${this.r0},${this.g0},${this.b0},${0.78 * alpha})`);
-      g.addColorStop(0.55, `rgba(${this.r0},${this.g0},${this.b0},${0.42 * alpha})`);
-      g.addColorStop(1,    `rgba(${this.r0},${this.g0},${this.b0},0)`);
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
-      ctx.fillStyle = g; ctx.fill();
-    }
-  }
-
-  const N = 7;
-  const blobs = Array.from({ length: N }, (_, i) => new Blob(i, N));
-
   /* ---- タイムライン（秒） ---- */
-  const TF   = 1.3;   // フラッシュ開始
-  const TP   = 2.05;  // ピーク白 → 直後にテキスト登場
-  const TRING = 3.4;  // ターコイズリング拡散（テキスト表示後）
-  const TD   = 5.0;   // テキスト完了 → メイン表示へ
+  const TF   = 0.0;   // フラッシュ開始（即時）
+  const TP   = 0.55;  // 白フラッシュピーク
+  const TD   = 3.6;   // テキスト完了 → メイン表示へ
 
-  /* ---- テキスト制御（フラッシュピーク直後から） ---- */
+  /* ---- テキスト制御 ---- */
   const triggers = [
-    [TP + 0.08, () => document.getElementById('iBrand')?.classList.add('on')],
-    [TP + 0.48, () => document.getElementById('iL1')?.classList.add('up')],
-    [TP + 0.88, () => document.getElementById('iL2')?.classList.add('up')],
+    [TP + 0.10, () => document.getElementById('iBrand')?.classList.add('on')],
+    [TP + 0.50, () => document.getElementById('iL1')?.classList.add('up')],
+    [TP + 0.90, () => document.getElementById('iL2')?.classList.add('up')],
     [TP + 1.40, () => document.getElementById('iSub')?.classList.add('on')],
     [TD + 0.6,  () => {
       const introEl = document.getElementById('intro');
@@ -88,42 +43,23 @@
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = '#030D0F'; ctx.fillRect(0, 0, W, H);
 
-    // Phase1: ブロブ
-    if (t < TF) {
-      blobs.forEach(b => { b.update(t); b.draw(); });
+    // フラッシュ（白が瞬く）
+    if (t < TP) {
+      const p = easeOutExpo(t / TP);
+      ctx.fillStyle = `rgba(255,255,255,${p * p * 0.95})`; ctx.fillRect(0, 0, W, H);
     }
 
-    // Phase2: フラッシュ
-    if (t >= TF && t < TP) {
-      blobs.forEach(b => { b.update(t); b.draw(); });
-      const p = easeOutExpo((t - TF) / (TP - TF));
-      ctx.fillStyle = `rgba(0,220,235,${p * 0.7})`; ctx.fillRect(0, 0, W, H);
-      ctx.fillStyle = `rgba(255,255,255,${p * p * 0.92})`; ctx.fillRect(0, 0, W, H);
-    }
-
-    // Phase3: フラッシュ後 → 暗い背景＋グロー（テキスト登場）
+    // 暗い背景＋グローが定着
     if (t >= TP) {
-      const p = Math.min((t - TP) / 0.9, 1);
-      // 白フラッシュの残光を素早く消す
-      if (t < TP + 0.28) {
-        ctx.fillStyle = `rgba(255,255,255,${(1 - (t - TP) / 0.28) * 0.88})`; ctx.fillRect(0, 0, W, H);
+      const p = Math.min((t - TP) / 0.7, 1);
+      if (t < TP + 0.3) {
+        ctx.fillStyle = `rgba(255,255,255,${(1 - (t - TP) / 0.3) * 0.9})`; ctx.fillRect(0, 0, W, H);
       }
-      ctx.fillStyle = `rgba(3,13,15,${p * 0.92})`; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = `rgba(3,13,15,${p * 0.94})`; ctx.fillRect(0, 0, W, H);
       const glow = ctx.createRadialGradient(W * 0.15, H * 0.72, 0, W * 0.15, H * 0.72, W * 0.5);
       glow.addColorStop(0, `rgba(0,200,215,${p * 0.18})`);
       glow.addColorStop(1, 'rgba(0,200,215,0)');
       ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
-    }
-
-    // Phase4: ターコイズリング拡散（テキスト表示後）
-    if (t >= TRING && t < TRING + 0.55) {
-      const p = easeOutExpo((t - TRING) / 0.55);
-      const rr = p * Math.hypot(W, H) * 0.75;
-      const ga = ctx.createRadialGradient(W/2, H/2, rr * 0.55, W/2, H/2, rr);
-      ga.addColorStop(0,    'rgba(0,200,215,0)');
-      ga.addColorStop(0.65, `rgba(0,200,215,${(1 - p) * 0.55})`);
-      ga.addColorStop(1,    'rgba(0,200,215,0)');
-      ctx.fillStyle = ga; ctx.fillRect(0, 0, W, H);
     }
 
     /* トリガー発火 */
